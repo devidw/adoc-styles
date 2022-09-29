@@ -4,6 +4,8 @@
   "description": "A modern and fully-customizable skin on top of the default Asciidoctor stylesheet.",
   "type": "module",
   "main": "src/adoc-skin.sass",
+  "sass": "src/adoc-skin.sass",
+  "style": "dist/adoc-skin.css",
   "files": [
     "src",
     "dist"

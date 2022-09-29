@@ -1,6 +1,6 @@
 {
   "name": "adoc-skin",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A modern and fully-customizable skin on top of the default Asciidoctor stylesheet.",
   "type": "module",
   "main": "src/adoc-skin.sass",

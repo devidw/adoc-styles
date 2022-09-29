@@ -1,0 +1,37 @@
+{
+  "name": "adoc-skin",
+  "version": "0.0.0",
+  "description": "A modern and fully-customizable skin on top of the default Asciidoctor stylesheet.",
+  "type": "module",
+  "main": "src/adoc-skin.sass",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "scripts": {
+    "build": "sass src/adoc-skin.sass dist/adoc-skin.css --style compressed",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "sass": "^1.55.0",
+    "normalize.css": "^8.0.1"
+  },
+  "keywords": [
+    "asciidoctor",
+    "adoc",
+    "stylesheet",
+    "skin",
+    "css",
+    "sass",
+    "scss"
+  ],
+  "author": "David Wolf <d@wolf.gdn>",
+  "license": "MIT",
+  "homepage": "https://github.com/devidw/adoc-styles/tree/main/packages/adoc-skin#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devidw/adoc-styles.git",
+    "directory": "packages/adoc-skin"
+  }
+}

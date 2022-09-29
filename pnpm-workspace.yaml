@@ -1,3 +1,3 @@
 packages:
-  - adoc-skin
   - site
+  - packages/*

@@ -1,0 +1,13 @@
+@use "sass:meta"
+@use "sass:map"
+@use "../config"
+
+@function css-var-name($name)
+  @return "--a-#{$name}"
+
+@function css-var($name)
+  $fullname: "color-#{$name}"
+  @if config.$use-css-vars
+    @return var(#{css-var-name($fullname)})
+  @else
+    @return map.get(meta.module-variables("config"), $fullname)

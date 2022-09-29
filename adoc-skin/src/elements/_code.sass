@@ -1,0 +1,18 @@
+@use "../abstracts" as *
+
+// inline
+*:not(pre) > code
+  // margin-left: .1rem
+  // margin-right: .1rem
+  background-color: css-var(block-bg)
+  // font-weight: 600
+
+// block
+// pre > code
+
+// inline and block
+*:not(pre) > code,
+pre > code
+  font-family: $font-family-monospace
+  color: css-var(block-fg)
+  word-wrap: break-word

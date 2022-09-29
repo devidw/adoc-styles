@@ -1,0 +1,8 @@
+@use "../abstracts" as *
+
+dialog
+  background: css-var(block-bg)
+  @include border
+
+  &::backdrop
+    backdrop-filter: blur(10px)

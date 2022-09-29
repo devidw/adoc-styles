@@ -1,0 +1,10 @@
+@use "sass:meta"
+@use "sass:string"
+@use "../config"
+@use "./functions"
+
+@if config.$use-css-vars
+  :root
+    @each $name, $value in meta.module-variables("config")
+      @if string.index($name, "color-") == 1
+        #{functions.css-var-name($name)}: #{$value}

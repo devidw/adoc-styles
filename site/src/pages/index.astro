@@ -1,0 +1,18 @@
+---
+import Layout from "../layouts/Layout.astro"
+import ThemeBuilder from "../components/ThemeBuilder.svelte"
+import { AsciiDoctor } from "astro-adoc/components"
+import "../styles/test.scss"
+---
+
+<Layout>
+  <ThemeBuilder client:only>
+    <div slot="preview">
+      <AsciiDoctor
+        path="src/adoc/adoc"
+        options={{ attributes: { showtitle: true } }}
+      />
+      <AsciiDoctor path="src/adoc/html" />
+    </div>
+  </ThemeBuilder>
+</Layout>

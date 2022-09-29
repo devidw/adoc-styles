@@ -1,0 +1,9 @@
+= Asciidoctor Styles
+
+Monorepo for stylesheets, "skins" and tooling around Asciidoctor document
+styles.
+
+- add ci workflow for publish
+- add ci for demo site on gh pages
+
+// - new project "lite", no skin only plain

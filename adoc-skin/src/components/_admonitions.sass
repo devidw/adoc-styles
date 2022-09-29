@@ -1,0 +1,63 @@
+@use "sass:meta"
+@use "sass:color"
+@use "sass:map"
+@use "../abstracts" as a
+
+$admonitions: tip, note, important, caution, warning
+
+.admonitionblock
+  border-left-style: solid
+  border-left-width: a.$body-font-size * 0.5
+  border-radius: a.$body-font-size * 0.25
+
+  @include a.box-shadow
+
+  table
+    border-top-left-radius: 0
+    border-bottom-left-radius: 0
+
+  @each $admonition in $admonitions
+    &.#{$admonition}
+      $color: a.css-var($admonition)
+      $icon: map.get(meta.module-variables("a"), "icon-#{$admonition}")
+
+      border-left-color: $color
+      background: linear-gradient(135deg, a.css-var(block-bg) 0%, $color 100%)
+
+      *::selection
+        background: $color
+
+      .title
+        color: $color
+
+      td.icon i[class*='icon-']
+        font-size: 1em
+        font-style: normal
+        text-shadow: unset
+
+        &::before
+          content: "#{$icon}"
+          color: transparent
+          text-shadow: 0 0 $color
+
+        &::after
+          content: attr(title)
+          margin-left: 0.35em
+          color: $color
+          font-weight: bold
+
+  tr
+    display: flex
+    flex-direction: column
+
+    td.icon
+      width: 100%
+      padding-bottom: 0
+      padding-left: 1.125em
+      border-width: 0
+      text-align: left
+
+    td.content
+      padding-top: 0
+      border: none
+      color: a.css-var(body-fg) !important

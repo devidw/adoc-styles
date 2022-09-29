@@ -1,0 +1,41 @@
+@use "sass:color"
+@use "../abstracts" as *
+
+.quoteblock, .verseblock
+  .attribution
+    text-align: end
+    color: css-var(body-fg)
+    opacity: .5
+
+    cite
+      color: css-var(body-fg)
+
+.quoteblock blockquote,
+blockquote
+  color: css-var(brand)
+  border-left: none
+  font-size: 1.15rem
+  font-style: italic
+  line-height: 1.75
+  word-spacing: .1em
+  text-align: justify
+
+  &::before
+    content: "\201c"
+    float: left
+    font-size: 2.75em
+    font-weight: 700
+    line-height: .6em
+    margin-left: -.6em
+    text-shadow: 0 1px 2px rgba(0,0,0,.1)
+    font-family: $font-family-heading
+    color: css-var(brand)
+    opacity: .35
+
+  p
+    color: css-var(brand)
+
+.verseblock
+  pre
+    color: css-var(brand)
+    font-family: $font-family-body

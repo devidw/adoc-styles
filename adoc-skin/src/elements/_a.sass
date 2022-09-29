@@ -1,0 +1,46 @@
+@use "../abstracts" as *
+
+a
+  color: css-var(body-fg)
+  text-underline-position: under
+  transition: all .1s ease-in-out
+  padding-bottom: 2px
+  box-shadow: transparent 0 -3px 0 -1px inset
+  @include focus
+
+  &:not(:focus):not(:focus-visible):hover
+    box-shadow: css-var(a-link) 0 -30px 0 -1px inset
+
+  &:not([href]), &[aria-current="location"], &[aria-current="page"]
+    pointer-events: none
+    text-decoration: none
+    font-weight: bold
+
+  $states: 'link' css-var(a-link), 'visited' css-var(a-visited)
+
+  @each $state, $color in $states
+    // @debug $state, $color
+    &:#{$state}
+      // color: $color
+      text-decoration-color: $color
+      // -webkit-tap-highlight-color: $color
+
+      &:hover
+        color: css-var(body-fg)
+        text-decoration-color: transparent
+
+      // &:active
+      //   color:
+
+      &:focus, &:focus-visible
+        color: $color
+        outline-color: $color
+        text-decoration: none
+
+  &[target="_blank"]
+    &:after
+      display: inline-block
+      margin-left: .2rem
+      text-decoration: none
+      content: '#{$icon-target-blank}'
+      // background: css-var(body-bg)

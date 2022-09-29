@@ -1,0 +1,13 @@
+@use "../abstracts" as *
+
+@for $i from 1 through 6
+  h#{$i}
+    font-family: $font-family-heading
+    word-spacing: 2px * calc($i / 6)
+    // letter-spacing: $i * .5px
+    // text-transform: uppercase
+    color: css-var(brand)
+    font-weight: 500
+
+    a
+      text-underline-position: auto

@@ -1,0 +1,52 @@
+== Input
+Valid inputs are highlighted with a tick and invalid inputs are highlighted with a cross. Check it out!
+
+.`text`
++++
+<input type="text" required placeholder="Text">
++++
+
+.`number`
++++
+<input type="number" required placeholder="Number">
++++
+
+.`email`
++++
+<input type="email" required placeholder="E-Mail">
++++
+
+.`url`
++++
+<input type="url" required placeholder="URL">
++++
+
+.`password`
++++
+<input type="password" required placeholder="Password">
++++
+
+
+== Textarea
++++
+<textarea placeholder="…"></textarea>
++++
+
+
+== Button
++++
+<p>
+  <button type="button">Default</button>
+</p>
+<p>
+  <button type="button" disabled>Disabled</button>
+</p>
++++
+
+== Details
++++
+<details open>
+  <summary>Lorem ipsum</summary>
+  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+</details>
++++

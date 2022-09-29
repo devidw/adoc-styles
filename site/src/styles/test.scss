@@ -1,0 +1,4 @@
+// Set your preferences
+@use "adoc-skin/src/config" with ($use-css-vars: true);
+// Use the library
+@use "adoc-skin";

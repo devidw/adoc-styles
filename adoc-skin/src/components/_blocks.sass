@@ -1,0 +1,16 @@
+@use "../abstracts" as *
+
+.exampleblock .content,
+.sidebarblock,
+.literalblock pre, .listingblock pre:not(.highlight), .listingblock pre[class=highlight], .listingblock pre[class^="highlight "], .listingblock pre.CodeRay, .listingblock pre.prettyprint,
+div.highlight
+  background: css-var(block-bg)
+  color: css-var(block-fg)
+  border-color: css-var(border)
+  border-style: solid
+  border-width: $border-width
+  @include box-shadow
+
+// AsciiDoctor code block
+pre[class="highlight"]
+  background: transparent !important

@@ -1,0 +1,37 @@
+@use "sass:meta"
+@use "sass:map"
+@use "sass:color"
+@use "sass:string"
+@use "../config" as c
+@use "./functions" as *
+
+@mixin focus
+  &:focus, &:focus-visible
+    outline-style: solid
+    outline-color: css-var(a-link)
+    outline-width: 0.2rem
+    outline-offset: 0.25rem
+
+@mixin border-radius($top-left: c.$border-radius, $top-right: c.$border-radius, $bottom-left: c.$border-radius, $bottom-right: c.$border-radius)
+  border-top-left-radius: $top-left
+  border-top-right-radius: $top-right
+  border-bottom-left-radius: $bottom-left
+  border-bottom-right-radius: $bottom-right
+
+@mixin box-shadow
+  box-shadow: 0 0px 10px 3px #00000033
+
+@mixin border($width: c.$border-width, $style: solid, $color: css-var(border))
+  border-width: $width
+  border-style: $style
+  border-color: $color
+
+@mixin icon-bg-url($icon, $color)
+  $resolved-icon: map.get(meta.module-variables("c"), "icon-#{$icon}")
+  $resolved-color: map.get(meta.module-variables("c"), "color-#{$color}")
+  // due to the fact that we want to set a hex color as a background-image, we
+  // need to encode the '#' character as '%23' in the svg data url
+  $url-color: "%23" + string.slice("#{$resolved-color}", 2)
+  // @debug css-var(string)
+
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewport="0 0 48 48" style="fill:#{$url-color};font-size:24px"><text y="50%">#{$resolved-icon}</text></svg>')

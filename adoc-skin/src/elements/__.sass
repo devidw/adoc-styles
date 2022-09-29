@@ -1,0 +1,13 @@
+@use "../abstracts" as *
+
+*
+  @include focus
+
+  -webkit-tap-highlight-color: transparent
+
+  &::selection
+    background: css-var(brand)
+    color: css-var(body-bg)
+
+p, blockquote, dt, td.content, span.alt
+  font-size: $body-font-size

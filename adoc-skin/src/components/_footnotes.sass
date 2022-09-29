@@ -1,0 +1,12 @@
+@use "sass:color"
+@use "../abstracts" as *
+
+#footnotes
+  $color: css-var(body-fg)
+
+  hr
+    color: $color
+    @include border(calc($border-width / 2))
+
+  a
+    color: $color

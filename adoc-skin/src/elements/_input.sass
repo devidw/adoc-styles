@@ -1,0 +1,55 @@
+@use "sass:color"
+@use "../abstracts" as *
+
+input,
+textarea
+  // width: 100%
+  padding: calc($body-font-size / 2) calc($body-font-size / 2)
+  border: $border-width solid css-var(border)
+  background: css-var(block-bg)
+  color: css-var(body-fg)
+
+  &:focus
+    outline: none
+
+    &:valid
+      border-color: css-var(tip)
+
+      &::selection
+        background: css-var(tip)
+
+    &:invalid
+      border-color: css-var(warning)
+
+      &::selection
+        background: css-var(warning)
+
+input[type="color"]
+  padding: 0
+  border: none
+
+input
+  &[list]::-webkit-calendar-picker-indicator
+    display: none
+
+  &[type="text"],
+  &[type="url"],
+  &[type="email"],
+  &[type="tel"],
+  &[type="search"],
+  &[type="password"]
+    &:focus
+      &:valid,
+      &:invalid
+        padding-left: 1.75rem
+        color: css-var(body-fg)
+        background-size: 48px
+        background-position: 0.5rem 6px
+        background-repeat: no-repeat
+        transition: padding-left $transition-duration, border-color $transition-duration, background-image $transition-duration
+
+      &:valid
+        @include icon-bg-url(valid, tip)
+
+      &:invalid
+        @include icon-bg-url(invalid, warning)

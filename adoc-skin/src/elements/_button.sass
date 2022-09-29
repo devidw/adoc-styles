@@ -1,0 +1,40 @@
+@use "sass:color"
+@use "sass:map"
+@use "../abstracts" as *
+
+button,
+input[type="submit"]
+  padding: calc($body-font-size / 6) calc($body-font-size / 2)
+  background: css-var(block-fg) !important
+  color: css-var(block-bg)
+  border: 0
+
+  @include border-radius
+
+  // &:focus
+  //   outline: none
+
+  &:hover, &:active, &:focus
+    transition: background $transition-duration, color $transition-duration
+
+  &:hover, &:focus
+    background: css-var(block-fg)
+    color: css-var(block-bg)
+
+  &:active
+    background: css-var(block-fg)
+    color: css-var(block-bg)
+
+button[disabled],
+input[type="submit"][disabled]
+  cursor: not-allowed
+
+  &:before
+    content: "#{$icon-not-allowed}"
+    margin-right: 0.2rem
+    color: transparent
+    text-shadow: 0 0 css-var(block-bg)
+
+  &:hover, &:active, &:focus
+    background: css-var(block-fg)
+    color: css-var(block-bg)

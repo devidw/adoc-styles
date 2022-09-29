@@ -1,0 +1,51 @@
+@use "../abstracts" as *
+
+// $border-radius: 1rem
+
+table,
+td,
+table.tableblock,
+td.tableblock,
+table.grid-all,
+table.grid-all td.tableblock
+  // border-width: $border-width
+  // border-style: solid
+  border-color: css-var(border)
+  // border-width: $border-width / 2
+
+  // @include border()
+
+table
+  background: css-var(block-bg)
+  color: css-var(block-fg)
+  border-collapse: collapse
+  // border-radius: $border-radius
+  border-width: 1px
+
+  @include box-shadow
+
+  th, th.tableblock
+    border-width: 1px
+    border-color: css-var(border)
+    background: css-var(body-bg)
+    color: css-var(block-fg)
+
+    p
+      color: css-var(block-fg)
+
+  thead
+    background: transparent
+
+    tr
+      th
+        color: css-var(block-fg)
+
+  tbody
+    tr
+      &.even, &.alt, &:nth-of-type(even)
+        background: css-var(body-bg)
+
+      td
+        color: css-var(block-fg)
+        border-width: 1px
+        border-style: solid

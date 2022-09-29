@@ -3,6 +3,4 @@
 Monorepo for stylesheets, "skins" and tooling around Asciidoctor document
 styles.
 
-- add ci for demo site on gh pages
-
 // - new project "lite", no skin only plain

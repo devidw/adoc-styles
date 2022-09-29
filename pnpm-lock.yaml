@@ -8,7 +8,7 @@ importers:
     devDependencies:
       bumpp: 8.2.1
 
-  adoc-skin:
+  packages/adoc-skin:
     specifiers:
       normalize.css: ^8.0.1
       sass: ^1.55.0
@@ -29,9 +29,9 @@ importers:
       svelte: ^3.50.1
       unocss: ^0.45.24
     devDependencies:
-      '@astrojs/image': 0.8.0
+      '@astrojs/image': 0.8.1
       '@astrojs/svelte': 1.0.0_ulvjd2lhcl4t2mby6nf3o5zrx4
-      adoc-skin: link:../adoc-skin
+      adoc-skin: link:../packages/adoc-skin
       astro: 1.3.0_sass@1.55.0
       astro-adoc: 0.2.3
       copy-to-clipboard: 3.3.2
@@ -73,13 +73,19 @@ packages:
     resolution: {integrity: sha512-xZ81C/oMfExdF18I1Tyd2BKKzBqO+qYYctSy4iCwH4UWSo/4Y8A8MAzV1hG67uuE7hFRourSl6H5KUbhyChv/A==}
     dev: true
 
-  /@astrojs/image/0.8.0:
-    resolution: {integrity: sha512-9iCamTDMtlF0e+tUurqVG6kfC2iH8BkDCR4g4p8qF1c3YjjeNfI1BKiQjoVSfcC3zP1ZH7CJJqlV7moafyLLzw==}
+  /@astrojs/image/0.8.1:
+    resolution: {integrity: sha512-vlfPFYHt9vpAZwZG4O9flumFM2fNkCKleOucqaDngu7pNHxSpf14j9ywlBNz4JryVehUupeffbVn561kBhhOJQ==}
+    peerDependencies:
+      sharp: '>=0.31.0'
+    peerDependenciesMeta:
+      sharp:
+        optional: true
     dependencies:
       '@altano/tiny-async-pool': 1.0.2
       image-size: 1.0.2
       magic-string: 0.25.9
       mime: 3.0.0
+      slash: 4.0.0
     dev: true
 
   /@astrojs/language-server/0.26.2:

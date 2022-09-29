@@ -5,5 +5,7 @@ import UnoCss from "@unocss/astro"
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [image(), svelte(), UnoCss()]
+  integrations: [image(), svelte(), UnoCss()],
+  site: 'https://devidw.github.io',
+  base: '/adoc-styles',
 })

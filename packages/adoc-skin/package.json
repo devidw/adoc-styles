@@ -11,13 +11,14 @@
     "dist"
   ],
   "scripts": {
-    "build": "sass src/adoc-skin.sass dist/adoc-skin.css --style compressed",
+    "build": "sass src/adoc-skin.sass dist/adoc-skin.css --style compressed --no-source-map",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {},
+  "dependencies": {
+    "normalize.css": "latest"
+  },
   "devDependencies": {
-    "sass": "^1.55.0",
-    "normalize.css": "^8.0.1"
+    "sass": "latest"
   },
   "keywords": [
     "asciidoctor",

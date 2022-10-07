@@ -22,8 +22,10 @@
 				"GitHub.copilot",
 				"syler.sass-indented",
 				"MichaelCurrin.auto-commit-msg",
-				"antfu.unocss",
-				"asciidoctor.asciidoctor-vscode"
+				"asciidoctor.asciidoctor-vscode",
+				"bradlc.vscode-tailwindcss",
+				"svelte.svelte-vscode",
+				"antfu.unocss"
 			]
 		}
 	},

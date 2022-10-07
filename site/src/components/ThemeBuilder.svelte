@@ -51,10 +51,10 @@ ${cssVarLines}
 </script>
 
 <div class="grid sm:grid-cols-2 gap-10 max-w-5xl mx-auto">
-  <div class="sm:(h-screen overflow-y-auto) px-3">
+  <div class="sm:h-screen overflow-y-auto px-3">
     <slot name="preview" />
   </div>
-  <div class="sm:(h-screen overflow-y-auto) px-3">
+  <div class="sm:h-screen overflow-y-auto px-3">
     <div class="w-full space-y-5">
       <div>
         <h4>Configuration</h4>

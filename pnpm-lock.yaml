@@ -10,10 +10,11 @@ importers:
 
   packages/adoc-skin:
     specifiers:
-      normalize.css: ^8.0.1
-      sass: ^1.55.0
-    devDependencies:
+      normalize.css: latest
+      sass: latest
+    dependencies:
       normalize.css: 8.0.1
+    devDependencies:
       sass: 1.55.0
 
   site:
@@ -21,7 +22,7 @@ importers:
       '@astrojs/image': latest
       '@astrojs/svelte': ^1.0.1
       '@astrojs/tailwind': ^2.0.2
-      adoc-skin: workspace:0.1.0
+      adoc-skin: workspace:*
       astro: latest
       astro-adoc: ^0.3.0
       copy-to-clipboard: ^3.3.2
@@ -3050,7 +3051,7 @@ packages:
 
   /normalize.css/8.0.1:
     resolution: {integrity: sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==}
-    dev: true
+    dev: false
 
   /npm-run-path/5.1.0:
     resolution: {integrity: sha512-sJOdmRGrY2sjNTRMbSvluQqg+8X7ZK61yvzBEIDhz4f8z1TZFYABsqjjCBd/0PUNE9M6QDgHJXQkGUEm7Q+l9Q==}

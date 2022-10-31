@@ -7,19 +7,24 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "deploy": "netlify deploy --prod",
+    "publish": "pnpm run build && pnpm run deploy"
   },
   "devDependencies": {
     "@astrojs/image": "latest",
-    "@astrojs/svelte": "^1.0.1",
-    "@astrojs/tailwind": "^2.0.2",
-    "adoc-skin": "workspace:*",
+    "@astrojs/svelte": "^1.0.2",
+    "@astrojs/tailwind": "^2.1.1",
+    "adoc-skin": "workspace:0.1.2",
     "astro": "latest",
     "astro-adoc": "^0.3.0",
     "copy-to-clipboard": "^3.3.2",
     "highlight.js": "^11.6.0",
     "sass": "^1.55.0",
-    "svelte": "^3.50.1",
-    "tailwindcss": "^3.1.8"
+    "svelte": "^3.52.0",
+    "tailwindcss": "^3.2.1"
+  },
+  "dependencies": {
+    "netlify-cli": "^12.0.11"
   }
 }

@@ -2,6 +2,7 @@
   "build": {
     "dockerfile": "Dockerfile"
   },
+  "postCreateCommand": "pnpm install",
   "customizations": {
     "vscode": {
       "extensions": [

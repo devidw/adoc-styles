@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+https://adoc-skin.netlify.app/* https://adoc-skin.wolf.gdn/:splat 301!

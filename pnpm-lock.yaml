@@ -12,7 +12,7 @@ importers:
     specifiers:
       normalize.css: latest
       sass: latest
-    dependencies:
+    optionalDependencies:
       normalize.css: 8.0.1
     devDependencies:
       sass: 1.55.0
@@ -3052,6 +3052,7 @@ packages:
   /normalize.css/8.0.1:
     resolution: {integrity: sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==}
     dev: false
+    optional: true
 
   /npm-run-path/5.1.0:
     resolution: {integrity: sha512-sJOdmRGrY2sjNTRMbSvluQqg+8X7ZK61yvzBEIDhz4f8z1TZFYABsqjjCBd/0PUNE9M6QDgHJXQkGUEm7Q+l9Q==}

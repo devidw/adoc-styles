@@ -14,11 +14,12 @@
     "build": "sass src/adoc-skin.sass dist/adoc-skin.css --style compressed --no-source-map",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "normalize.css": "latest"
-  },
+  "dependencies": {},
   "devDependencies": {
     "sass": "latest"
+  },
+  "optionalDependencies": {
+    "normalize.css": "latest"
   },
   "keywords": [
     "asciidoctor",

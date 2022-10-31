@@ -6,7 +6,7 @@ A modern and fully-customizable skin on top of the default Asciidoctor styleshee
 ## Installation
 
 ```console
-pnpm add adoc-skin
+pnpm add -D adoc-skin
 ```
 
 
